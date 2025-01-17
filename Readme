@@ -21,7 +21,6 @@ This app leverages machine learning to predict student exam scores based on vari
 The app has an easy-to-use interface where users can adjust the sliders and dropdown menus for categorical and numerical features to predict exam scores.
 
 ### Screenshot 1: App Overview
-
 ![App Overview](demo/1.png)
 
 ---
@@ -44,23 +43,18 @@ The app has an easy-to-use interface where users can adjust the sliders and drop
 ## Screenshots
 
 ### Screenshot 2: Categorical Feature List (Sidebar)
-
 ![Categorical Feature List 1](demo/2.png)
 
 ### Screenshot 3: Categorical Feature List (Sidebar)
-
 ![Categorical Feature List 2](demo/3.png)
 
 ### Screenshot 4: Numerical Feature List
-
 ![Numerical Feature List](demo/4.png)
 
 ### Screenshot 5: Categorical Dropdown Menu
-
 ![Categorical Dropdown](demo/5.png)
 
 ### Screenshot 6: Final Prediction Result
-
 ![Final Prediction](demo/6.png)
 
 ---
