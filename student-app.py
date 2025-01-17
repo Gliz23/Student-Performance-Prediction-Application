@@ -51,7 +51,7 @@ st.markdown("""
         }
         .header {
             text-align: center;
-            padding: 10px;
+            padding: 4px;
         }
         .header h1 {
             font-size: 28px;  
@@ -78,7 +78,7 @@ feature_names = [col for col in all_columns if col != 'Exam_Score']
 
 # Interactive sliders for feature inputs
 st.markdown("""
-    <div style="margin: 4rem auto; text-align: center;">
+    <div style="margin: 2rem auto; text-align: center;">
         <h3 style="color: #4CAF50;">Input Parameters</h3>
         <p>Adjust the sliders and dropdowns to predict the student's exam score.</p>
     </div>
@@ -191,10 +191,19 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# Button
+# Display the prediction result in a centered, styled way
 if st.button("Predict Exam Score", key="predict_button"):
     prediction = model.predict(scaled_input)
-    st.write(f"Predicted Exam Score: {prediction[0]:.2f}")
+    result = f"{prediction[0]:.2f}"  # Correct string formatting
+
+    st.markdown(f"""
+        <div style="text-align: center; margin-top: 20px;">
+            <h1 style="font-weight: 100; font-size: 20px; color: #F1F1F1;">Predicted Exam Score</h1>
+            <div style="font-size: 30px; font-weight: bold; color: #4CAF50;">
+                {result}
+            </div>
+        </div>
+    """, unsafe_allow_html=True)
 
 
 # Footer
