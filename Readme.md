@@ -11,6 +11,7 @@ Welcome to the **Student Performance Prediction App**! This web app allows you t
 5. [Screenshots](#screenshots)
 6. [Prediction Results](#prediction-results)
 7. [Technologies Used](#technologies-used)
+8. [License](#license)
 
 ## Introduction
 
@@ -21,7 +22,6 @@ This app leverages machine learning to predict student exam scores based on vari
 The app has an easy-to-use interface where users can adjust the sliders and dropdown menus for categorical and numerical features to predict exam scores.
 
 ### Screenshot 1: App Overview
-
 ![App Overview](demo/1.png)
 
 ---
@@ -31,6 +31,8 @@ The app has an easy-to-use interface where users can adjust the sliders and drop
 - **Sidebar with Interactive Inputs**: Users can input values through dropdown menus for categorical data and sliders for numerical values.
 - **Machine Learning Model**: The app uses a trained machine learning model to predict the student's exam score.
 - **Real-time Prediction**: When the user hits the "Predict Exam Score" button, the app displays the result.
+
+---
 
 ## How to Use
 
@@ -44,23 +46,18 @@ The app has an easy-to-use interface where users can adjust the sliders and drop
 ## Screenshots
 
 ### Screenshot 2: Categorical Feature List (Sidebar)
-
 ![Categorical Feature List 1](demo/2.png)
 
 ### Screenshot 3: Categorical Feature List (Sidebar)
-
 ![Categorical Feature List 2](demo/3.png)
 
 ### Screenshot 4: Numerical Feature List
-
 ![Numerical Feature List](demo/4.png)
 
 ### Screenshot 5: Categorical Dropdown Menu
-
 ![Categorical Dropdown](demo/5.png)
 
 ### Screenshot 6: Final Prediction Result
-
 ![Final Prediction](demo/6.png)
 
 ---
@@ -77,12 +74,6 @@ Once the user selects their desired inputs and clicks the "Predict Exam Score" b
 - **Machine Learning**: Trained model using algorithms like regression or decision trees.
 - **Pandas**: Data manipulation and feature encoding.
 - **Pickle**: Model and scaler saved and loaded using Pickle.
-
----
-
-Thank you for using the **Student Performance Prediction App**! 🌟
-
-For more information or to contribute, feel free to check out the [GitHub Repository](https://github.com/yourusername/student-performance-prediction).
 
 ---
 
