@@ -51,10 +51,10 @@ st.markdown("""
         }
         .header {
             text-align: center;
-            padding: 4px;
+            padding-bottom: 4px;
         }
         .header h1 {
-            font-size: 28px;  
+            font-size: 38px;  
             color: #4CAF50; /* Light green */
             margin-bottom: 5px;
         }
@@ -65,8 +65,8 @@ st.markdown("""
     </style>
 
     <div class="header">
-        <h1>📚 Student Performance Prediction App 📊</h1>
-        <p>Predict the exam scores based on various student performance factors</p>
+        <h1>📚Student Performance Prediction App</h1>
+        <p>📊Predict the exam scores based on various student performance factors</p>
     </div>
 """, unsafe_allow_html=True)
 
