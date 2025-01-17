@@ -154,9 +154,10 @@ scaled_input = scaler.transform(input_df)
 
 # Custom Button Style
 st.markdown("""
-    <style>
-        .css-1emrehy.edgvbvh3 {
-            background-color: #ADD8E6;  /* Light Blue */
+ <style>
+        /* Style for Streamlit button */
+        .stButton>button {
+            background-color: #6CA0D9;  /* Darker Light Blue */
             color: white;
             font-size: 18px;
             border-radius: 10px;
@@ -164,18 +165,36 @@ st.markdown("""
             margin: 0 auto;
             display: block;
             padding: 10px;
+            border: 2px solid transparent; /* Default border (transparent) */
         }
-        .css-1emrehy.edgvbvh3:hover {
-            background-color: #87CEFA;  /* Lighter Blue */
+
+        /* Button hover state */
+        .stButton>button:hover {
+            background-color: #4B7BAE;  /* Even darker blue */
+            color: black;  /* Text color turns black */
+            border: 2px solid black;  /* Border turns black on hover */
+        }
+
+        /* Button active (clicked) state */
+        .stButton>button:active {
+            background-color: #4B7BAE !important;  /* Even darker blue */
+            color: black !important;  /* Text color stays black */
+            border: 2px solid black !important;  /* Border stays black when clicked */
+        }
+
+        /* Ensure the active state persists */
+        .stButton>button:focus {
+            background-color: #4B7BAE !important;  /* Make the background darker after click */
+            color: black !important;  /* Text color remains black */
+            border: 2px solid black !important;  /* Border stays black after click */
         }
     </style>
 """, unsafe_allow_html=True)
 
 # Button
-if st.button("Predict Exam Score"):
+if st.button("Predict Exam Score", key="predict_button"):
     prediction = model.predict(scaled_input)
     st.write(f"Predicted Exam Score: {prediction[0]:.2f}")
-
 
 
 # Footer
