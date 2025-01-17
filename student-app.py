@@ -43,8 +43,33 @@ df_test = df_test[columns_without_target]
 # Scale the test features
 scaled_test_features = scaler.transform(df_test)
 
-# Set the title of the app
-st.title('Student Performance Factors - Predict Exam Score')
+
+st.markdown("""
+    <style>
+        .stApp {
+            background-color: #000018; /* Dark blue background */
+        }
+        .header {
+            text-align: center;
+            padding: 10px;
+        }
+        .header h1 {
+            font-size: 28px;  
+            color: #4CAF50; /* Light green */
+            margin-bottom: 5px;
+        }
+        .header p {
+            font-size: 18px;  
+            color: #FFFFFF; /* White text */
+        }
+    </style>
+
+    <div class="header">
+        <h1>📚 Student Performance Prediction App 📊</h1>
+        <p>Predict the exam scores based on various student performance factors</p>
+    </div>
+""", unsafe_allow_html=True)
+
 
 # Produces all the columns without the target 'Exam_Score'
 feature_names = [col for col in all_columns if col != 'Exam_Score']
@@ -52,8 +77,14 @@ feature_names = [col for col in all_columns if col != 'Exam_Score']
 
 
 # Interactive sliders for feature inputs
-st.sidebar.header("Input Parameters")
-st.write("Adjust feature values for prediction:")
+st.markdown("""
+    <div style="margin: 4rem auto; text-align: center;">
+        <h3 style="color: #4CAF50;">Input Parameters</h3>
+        <p>Adjust the sliders and dropdowns to predict the student's exam score.</p>
+    </div>
+""", unsafe_allow_html=True)
+
+
 
 def user_input_features(df_test):
     feature_values = {}
@@ -121,7 +152,50 @@ input_df = input_df[columns_without_target]
 scaled_input = scaler.transform(input_df)
 
 
-# Make prediction
+# Custom Button Style
+st.markdown("""
+    <style>
+        .css-1emrehy.edgvbvh3 {
+            background-color: #ADD8E6;  /* Light Blue */
+            color: white;
+            font-size: 18px;
+            border-radius: 10px;
+            width: 200px;
+            margin: 0 auto;
+            display: block;
+            padding: 10px;
+        }
+        .css-1emrehy.edgvbvh3:hover {
+            background-color: #87CEFA;  /* Lighter Blue */
+        }
+    </style>
+""", unsafe_allow_html=True)
+
+# Button
 if st.button("Predict Exam Score"):
     prediction = model.predict(scaled_input)
     st.write(f"Predicted Exam Score: {prediction[0]:.2f}")
+
+
+
+# Footer
+st.markdown("""
+    <style>
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #2E7D32; 
+            color: white;
+            text-align: right;
+            padding-top: 7px;
+            padding-bottom: 7px;
+            font-size: 16px;
+            height: 36px;
+        }
+    </style>
+    <div class="footer">
+        <p>Created with ❤️ by Glory Elizabeth Akoto</p>
+    </div>
+""", unsafe_allow_html=True)
